@@ -1,0 +1,31 @@
+#site organization:
+
+The landing page will include a begin button, sign in button
+the top right. 
+/
+
+A full list of vocab will be sorted by frequency.
+The url for accessing a particular word is:
+/learn/movie/{word #}
+    After each request, a random unmastered word will be loaded. 
+
+General practice will be at:
+/learn/
+    this will improve general vocab comprehension
+
+Each user will start with a 10-50 word test to estimate vocab:
+/test/
+    if not logged in, the user can signup
+    after the test, common vocab will be sorted into estimated bins
+    all other vocab will be put into the level 0 bin
+
+The vocab list for a user will be at:
+/user/{username}/vocab/
+    The list will include 
+
+User homepage will be at
+/user/{username}/
+    Stats shown will include number of mastered words.
+    Active movie vocab that the user is trying learn
+    Reccomended movies based on comprehension
+
