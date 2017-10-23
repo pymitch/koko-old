@@ -7,9 +7,9 @@ class Word(models.Model):
     def __str__(self):
         return self.word
     def parts(self):
-        parts = self.sentence.split(self.word)
+        return self.sentence.split(self.word)
     def blank_space(self):
-        blank_space = "_" * len(self.word)
+        return "_" * len(self.word)
         
         
 class Input(models.Model):

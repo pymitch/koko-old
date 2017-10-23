@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse, Http404
 
 from .models import Word
 
@@ -7,11 +7,12 @@ from .models import Word
 def index(request):
     return HttpResponse("Hello, World. This is the learning section. Please sign in")
 
-def word(request, word):
-    ##find word 
-    ##w = Word( )
+def word(request, w): 
+    #replace try/except block with:
+    w = get_object_or_404(Word, word=w)
     context = {
-        'parts': w.parts,
+        'part1': w.parts()[0],
         'blank_space': w.blank_space,
+        'part2': w.parts()[1],
     }
     return render(request, 'learn/word.html',context)

@@ -12,6 +12,7 @@ The url for accessing a particular word is:
 General practice will be at:
 /learn/
     this will improve general vocab comprehension
+    the list could be ordered by word frequency
 
 Each user will start with a 10-50 word test to estimate vocab:
 /test/
