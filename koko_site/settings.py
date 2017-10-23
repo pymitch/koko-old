@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#change to user homepage in future
+LOGIN_REDIRECT_URL = '/learn/'
 
 # Application definition
 
@@ -55,7 +57,7 @@ ROOT_URLCONF = 'koko_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['koko_site/templates','learn'],
+        'DIRS': ['koko_site/templates/registration','learn'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

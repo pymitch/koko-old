@@ -1,9 +1,11 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, Http404
+from django.contrib.auth.decorators import login_required
 
 from .models import Word
 
 # Create your views here.
+@login_required
 def index(request):
     return HttpResponse("Hello, World. This is the learning section. Please sign in")
 

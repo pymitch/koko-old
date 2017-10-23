@@ -20,9 +20,10 @@ from . import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index),
-    url(r'^login/$', auth_views.login, name='login'),
-    url(r'^logout/$', auth_views.logout, name='logout'),
+    url(r'^$', views.index, name='index'),
+    url(r'^signup/$', views.signup, name='signup'),
+    url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
+    url(r'^logout/$', auth_views.logout, {'next_page': 'login'}, name='logout'),
     url(r'^password_reset/$', auth_views.password_reset,name='password_resest'),
     url(r'^learn/', include('learn.urls')),
 ]
