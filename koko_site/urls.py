@@ -24,6 +24,8 @@ urlpatterns = [
     url(r'^signup/$', views.signup, name='signup'),
     url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
     url(r'^logout/$', auth_views.logout, {'next_page': 'login'}, name='logout'),
+    url(r'^u/home/$', views.home, name='home'),
+    url(r'^u/(?P<username>[\w.@+-]+)/$', views.user_profile, name='user_profile'),
     url(r'^password_reset/$', auth_views.password_reset,name='password_resest'),
     url(r'^learn/', include('learn.urls')),
 ]

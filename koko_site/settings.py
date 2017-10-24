@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 #change to user homepage in future
-LOGIN_REDIRECT_URL = '/learn/'
+LOGIN_REDIRECT_URL = '/u/home'
 
 # Application definition
 

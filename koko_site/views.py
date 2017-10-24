@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.core.urlresolvers import reverse_lazy, reverse
+
 
 # Create your views here.
 @login_required
@@ -24,7 +26,14 @@ def signup(request):
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
 
-# def password_reset(request):
+def home(request):
+    return HttpResponseRedirect(reverse_lazy('user_profile', args=[request.user.username]))
+
+def user_profile(request, username):
+    return render(request, 'user_profile.html', {'username':username})
+    #return HttpResponse("coming soon")
+
+# def password_reset(request):  
 #      password_reset(request)
 
 # def password_change(request):
