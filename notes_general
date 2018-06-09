@@ -9,3 +9,17 @@ source ../ENV/bin/activate
 
 run server:
 python manage.py runserver
+
+git instructions:
+to commit:
+git add *
+git commit -m "message"
+git push
+
+to pull:
+git pull
+
+or 
+
+git fetch
+git merge origin/master
