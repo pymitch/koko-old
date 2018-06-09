@@ -4,4 +4,8 @@ create sentences from scraping screenplays and literature
 organize sentences into difficulty
     display appropriate sentence according to user difficulty
 
+run virtual env:
+source ../ENV/bin/activate
 
+run server:
+python manage.py runserver

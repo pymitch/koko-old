@@ -7,7 +7,8 @@ from django.core.urlresolvers import reverse_lazy, reverse
 
 
 # Create your views here.
-@login_required
+# @login_required 
+    # have to decide where/whether a login is required 
 def index(request):
     return render(request, 'index.html')
     # return HttpResponse("Hello, World. This is the Homepage. Take a test or sign in")
@@ -26,6 +27,7 @@ def signup(request):
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
 
+@login_required 
 def home(request):
     return HttpResponseRedirect(reverse_lazy('user_profile', args=[request.user.username]))
 

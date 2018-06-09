@@ -7,6 +7,9 @@ from .models import Word
 # Create your views here.
 @login_required
 def index(request):
+    #if signed in 
+    if request.user.is_authenticated():
+        return HttpResponse("sup")
     return HttpResponse("Hello, World. This is the learning section. Please sign in")
 
 def word(request, w): 
