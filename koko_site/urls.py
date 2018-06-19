@@ -28,4 +28,7 @@ urlpatterns = [
     url(r'^u/(?P<username>[\w.@+-]+)/$', views.user_profile, name='user_profile'),
     url(r'^password_reset/$', auth_views.password_reset,name='password_resest'),
     url(r'^learn/', include('learn.urls')),
+    url(r'^add-word/', views.add_word),
+    url(r'^test_add/',views.test_add, name='test_add')
+
 ]

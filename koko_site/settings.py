@@ -57,7 +57,7 @@ ROOT_URLCONF = 'koko_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['koko_site/templates/registration','learn'],
+        'DIRS': ['koko_site/templates/registration','learn','koko_site/templates/test'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

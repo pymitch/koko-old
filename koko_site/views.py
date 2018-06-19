@@ -35,6 +35,28 @@ def user_profile(request, username):
     return render(request, 'user_profile.html', {'username':username})
     #return HttpResponse("coming soon")
 
+
+
+
+
+
+from .forms import AddWordForm
+def add_word(request):
+    if request.method == 'POST':
+        form = AddWordForm(request.POST)
+        if form.is_valid():
+            # do something with form input
+            f = form.cleaned_data['new_word']
+            user = request.user
+            return render(request, 'test_add.html',{'word': f,'user': user.username})
+    else:
+        form = AddWordForm()
+    return render(request, 'add_word.html', {'form': form})
+
+def test_add(request):
+    return render(request, 'test_add.html',{'word': added_word})
+
+
 # def password_reset(request):  
 #      password_reset(request)
 
