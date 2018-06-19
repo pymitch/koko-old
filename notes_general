@@ -10,5 +10,21 @@ source ../ENV/bin/activate
 run server:
 python manage.py runserver
 
+<<<<<<< HEAD
 database:
 
+=======
+git instructions:
+to commit:
+git add *
+git commit -m "message"
+git push
+
+to pull:
+git pull
+
+or 
+
+git fetch
+git merge origin/master
+>>>>>>> eff1036596a42ff6e9cdab3019363660b0d439a3
